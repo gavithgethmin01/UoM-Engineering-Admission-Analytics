@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-canvas: #080B14;
+  --color-surface: #111827;
+  --color-elevated: #182235;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #080B14;
+    color: #F8FAFC;
+    color-scheme: dark;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom subtle dark scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080B14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Range input styling for Z-Score Planner */
+input[type="range"].analytics-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].analytics-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: #1E293B;
+}
+
+input[type="range"].analytics-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #3B82F6;
+  border: 2px solid #F8FAFC;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"].analytics-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  background: #60A5FA;
+}
+
+input[type="range"].analytics-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: #1E293B;
+}
+
+input[type="range"].analytics-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #3B82F6;
+  border: 2px solid #F8FAFC;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+}
